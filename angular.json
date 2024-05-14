@@ -21,6 +21,7 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
+              "src/polyfills.ts",
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
@@ -53,7 +54,8 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "watch": true
             }
           },
           "defaultConfiguration": "production"
@@ -80,7 +82,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
-              "zone.js",
+              "src/polyfills.ts",
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
